@@ -24,6 +24,11 @@ function Sidebar() {
             <Link to="/todo" className="nav-link">
               DailyGoal{" "}
             </Link>
+            </li>
+            <li className="navbar-item">
+            <Link to="/Pokemon" className="nav-link">
+              Pokemon
+            </Link>
           </li>
         </ul>
       </div>
