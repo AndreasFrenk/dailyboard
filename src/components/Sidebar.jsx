@@ -1,6 +1,5 @@
 import React from "react";
-import { Link, Route } from "react-router-dom";
-import { FaBars } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Sidebar() {
   return (
@@ -23,6 +22,11 @@ function Sidebar() {
           <li className="navbar-item">
             <Link to="/todo" className="nav-link">
               DailyGoal{" "}
+            </Link>
+          </li>
+          <li className="navbar-item">
+            <Link to="/Corona" className="nav-link">
+              Corona
             </Link>
           </li>
         </ul>
