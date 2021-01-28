@@ -7,6 +7,7 @@ import DailyImage from "./components/DailyImage";
 import Sidebar from "./components/Sidebar";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import Pokemon from "./components/Pokemon";
+import GenerateImage from "./components/GenerateImage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/image" exact component={DailyImage} />
         <Route path="/todo" exact component={ToDoList} />
         <Route path="/Pokemon" exact component={Pokemon}/>
+        <Route path="/GenerateImage" exact component={GenerateImage}/>
       </div>
     </Router>
   );

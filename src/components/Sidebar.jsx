@@ -30,6 +30,11 @@ function Sidebar() {
               Pokemon
             </Link>
           </li>
+          <li className="navbar-item">
+            <Link to="/GenerateImage" className="nav-link">
+              Generate Image
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>

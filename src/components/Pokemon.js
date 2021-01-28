@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import deepai from "deepai";
-
+import InputGroup from 'react-bootstrap/InputGroup';
+import FormControl from 'react-bootstrap/FormControl';
+import Button from 'react-bootstrap/Button';
 
 deepai.setApiKey("5d87d5bb-3dd4-4670-8c0d-2ff09e82e2c3");
-
 
 class Pokemon extends Component {
   constructor(props) {
@@ -12,8 +13,9 @@ class Pokemon extends Component {
       pokemonID: 1,
       imageURL: "",
       pokemonName: "",
-      inputText: "I was alone at home when suddenly"
+      inputText: "I was alone at home when suddenly",
     };
+    this.deepaiCall = this.deepaiCall.bind(this);
   }
 
   async deepaiCall() {
@@ -21,14 +23,15 @@ class Pokemon extends Component {
     //     text: "I am very happy to play with the newest APIs!"
     // });
     // console.log(result);
-
+    // console.log()
+    console.log(this.state);
     var resp = await deepai.callStandardApi("text-generator", {
       text: this.state.inputText,
     });
 
     this.setState({
-        generatedText: resp.output
-    })
+      generatedText: resp.output,
+    });
     console.log(resp);
   }
 
@@ -38,15 +41,15 @@ class Pokemon extends Component {
     });
 
     this.setState({
-        generatedImageURL: resp.output_url,
+      generatedImageURL: resp.output_url,
     });
     console.log(resp);
   }
 
   componentDidMount() {
     // deepai.setApiKey(this.state.deepaiAPIKey);
-    this.deepaiCall();
-    this.deepaiImageCall();
+    // this.deepaiCall();
+    // this.deepaiImageCall();
     const randomId = Math.floor(Math.random() * 151 + 1);
     const request = new XMLHttpRequest();
     console.log(randomId);
@@ -69,6 +72,13 @@ class Pokemon extends Component {
     request.send();
   }
 
+  setInputText = (event) => {
+    console.log(event.target.value);
+    this.setState({
+      inputText: event.target.value
+    })
+  }
+
   render() {
     return (
       <div className="container-fluid pt-4">
@@ -83,15 +93,22 @@ class Pokemon extends Component {
               <figcaption class="figure-caption">
                 {this.state.pokemonName}
               </figcaption>
-              <img
+              {/* <img
                 src={this.state.generatedImageURL}
                 className="figure-img img-fluid rounded "
                 alt="A generic square placeholder image with rounded corners in a figure."
-              />
+              /> */}
               <figcaption class="figure-caption">
                 {this.state.generatedText}
               </figcaption>
             </figure>
+            <InputGroup>
+              <InputGroup.Prepend>
+                <InputGroup.Text>With textarea</InputGroup.Text>
+              </InputGroup.Prepend>
+              <FormControl as="textarea" aria-label="With textarea" onChange={this.setInputText}/>
+            </InputGroup>
+            <Button variant="dark" onClick={this.deepaiCall}>Dark</Button>
           </div>
         </div>
       </div>
