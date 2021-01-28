@@ -25,6 +25,11 @@ function Sidebar() {
               DailyGoal{" "}
             </Link>
           </li>
+          <li className="navbar-item">
+            <Link to="/RandomPoet" className="nav-link">
+              Poet{" "}
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>
