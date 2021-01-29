@@ -11,7 +11,7 @@ import { RiFoggyLine } from "react-icons/ri";
 
 const WEATHER_URL = "https://api.openweathermap.org/data/2.5/weather";
 const API_KEY = "4fd3b64c5f53ea593f57b9ba4d2eae59";
-
+const CORS_Helper = "https://cors-anywhere.herokuapp.com/";
 const Wetter = () => {
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState({});
@@ -70,7 +70,7 @@ const Wetter = () => {
 
   const apiCall = () => {
     axios
-      .get(WEATHER_URL, {
+      .get(CORS_Helper + WEATHER_URL, {
         params: {
           q: query,
           appid: API_KEY,
@@ -78,7 +78,7 @@ const Wetter = () => {
         },
       })
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         setWeather(res.data);
         changeStyle(res.data.weather[0].main);
         changeIcon(res.data.weather[0].main);
