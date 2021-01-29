@@ -9,6 +9,8 @@ import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import RandomPoem from "./components/RandomPoem";
 import Corona from './components/Corona';
 import CoronaCountryInfo from './components/CoronaCountryInfo';
+import Pokemon from "./components/Pokemon";
+import GenerateImage from "./components/GenerateImage";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
         <Route path="/RandomPoem" exact component={RandomPoem} />
         <Route path="/Corona" exact component={Corona} />
         <Route path="/Corona/Country/:countryname" exact component={CoronaCountryInfo} />
+        <Route path="/Pokemon" exact component={Pokemon}/>
+        <Route path="/GenerateImage" exact component={GenerateImage}/>
       </div>
     </Router>
   );

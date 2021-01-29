@@ -23,6 +23,16 @@ function Sidebar() {
             <Link to="/todo" className="nav-link">
               DailyGoal{" "}
             </Link>
+            </li>
+            <li className="navbar-item">
+            <Link to="/Pokemon" className="nav-link">
+              Pokemon
+            </Link>
+          </li>
+          <li className="navbar-item">
+            <Link to="/GenerateImage" className="nav-link">
+              Generate Image
+            </Link>
           </li>
           <li className="navbar-item">
             <Link to="/RandomPoem" className="nav-link">
