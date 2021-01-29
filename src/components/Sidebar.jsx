@@ -26,8 +26,8 @@ function Sidebar() {
             </Link>
           </li>
           <li className="navbar-item">
-            <Link to="/RandomPoet" className="nav-link">
-              Poet{" "}
+            <Link to="/RandomPoem" className="nav-link">
+              Poem{" "}
             </Link>
           </li>
         </ul>
