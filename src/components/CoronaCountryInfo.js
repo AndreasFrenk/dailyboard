@@ -157,57 +157,6 @@ class CoronaCountryInfo extends Component {
           </div>
         ) : (
           <div>
-            {/* <ListGroup>
-            <ListGroup.Item>
-                {" "}
-                Country{" "}
-                <span style={{ color: "#0dbcff", paddingRight: "5px" }}>
-                  {this.state.countryname}
-                </span>
-              </ListGroup.Item>
-              <ListGroup.Item>
-                {" "}
-                Total Confirmed{" "}
-                <span style={{ color: "#aaa", paddingRight: "5px" }}>
-                  {this.state.todayConfirmed}
-                </span>
-              </ListGroup.Item>
-              <ListGroup.Item>
-                {" "}
-                Total Deaths{" "}
-                <span style={{ color: "#696969", paddingRight: "5px" }}>
-                  {this.state.Deaths}
-                </span>
-              </ListGroup.Item>
-              <ListGroup.Item>
-                {" "}
-                Total Recovered{" "}
-                <span style={{ color: "#8ACA2B", paddingRight: "5px" }}>
-                  {this.state.Recovered}
-                </span>
-              </ListGroup.Item>
-              <ListGroup.Item>
-                {" "}
-                Today Confirmed{" "}
-                <span style={{ color: "#aaa", paddingRight: "5px" }}>
-                  {this.state.todayConfirmed}
-                </span>
-              </ListGroup.Item>
-              <ListGroup.Item>
-                {" "}
-                Today Deaths{" "}
-                <span style={{ color: "#696969", paddingRight: "5px" }}>
-                  {this.state.todayDeaths}
-                </span>
-              </ListGroup.Item>
-              <ListGroup.Item>
-                {" "}
-                Today Recovered{" "}
-                <span style={{ color: "#8ACA2B", paddingRight: "5px" }}>
-                  {this.state.todayRecovered ? 3 : 5}
-                </span>
-              </ListGroup.Item>
-            </ListGroup> */}
           </div>
         )}
       </div>
