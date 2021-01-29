@@ -7,6 +7,8 @@ import DailyImage from "./components/DailyImage";
 import Sidebar from "./components/Sidebar";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import RandomPoem from "./components/RandomPoem";
+import Corona from './components/Corona';
+import CoronaCountryInfo from './components/CoronaCountryInfo';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route path="/image" exact component={DailyImage} />
         <Route path="/todo" exact component={ToDoList} />
         <Route path="/RandomPoem" exact component={RandomPoem} />
+        <Route path="/Corona" exact component={Corona} />
+        <Route path="/Corona/Country/:countryname" exact component={CoronaCountryInfo} />
       </div>
     </Router>
   );
