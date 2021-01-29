@@ -11,6 +11,8 @@ import Corona from './components/Corona';
 import CoronaCountryInfo from './components/CoronaCountryInfo';
 import Pokemon from "./components/Pokemon";
 import GenerateImage from "./components/GenerateImage";
+import Wetter from "./components/Wetter";
+import News from "./components/News";
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
         <Route path="/Corona/Country/:countryname" exact component={CoronaCountryInfo} />
         <Route path="/Pokemon" exact component={Pokemon}/>
         <Route path="/GenerateImage" exact component={GenerateImage}/>
+        <Route path="/weather" exact component={Wetter} />
+        <Route path="/news" exact component={News} />
       </div>
     </Router>
   );

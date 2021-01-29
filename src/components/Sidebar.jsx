@@ -44,6 +44,16 @@ function Sidebar() {
               Corona
             </Link>
           </li>
+          <li className="navbar-item">
+            <Link to="/weather" className="nav-link">
+              Weather
+            </Link>
+          </li>
+          <li className="navbar-item">
+            <Link to="/news" className="nav-link">
+              News
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>

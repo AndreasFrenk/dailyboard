@@ -3,7 +3,9 @@
   height: 100vh;
 }
 
-.container-j {
-  width: 250px;
-  height: 100%;
+.wetter-card {
+  /* background-image: url("../src/assets/thunderstorm.jpg"); */
+  height: 500px;
+  border-radius: 20px;
+  width: 400px;
 }
